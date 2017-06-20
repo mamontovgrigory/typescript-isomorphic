@@ -4,20 +4,8 @@ const {asyncConnect} = require('redux-connect');
 
 import { IFlight, ICarrier } from 'models/avia';
 import { getFlights } from 'modules/avia/index';
+import { FlightItem } from 'components';
 const style = require('./style.css');
-
-const CarrierOption = (props: { carrier: ICarrier }) => (
-    <option value={props.carrier.name}>{props.carrier.name}</option>
-);
-
-const FlightItem = (props: { flight: IFlight }) => (
-    <div>
-        <h3>{props.flight.direction.from} - {props.flight.direction.to}</h3>
-        <p>{props.flight.arrival} - {props.flight.departure}</p>
-        <p>{props.flight.carrier}</p>
-        <br/>
-    </div>
-);
 
 interface IProps {
     flights: IFlight[];
@@ -63,14 +51,13 @@ class Home extends React.Component<IProps, IState> {
         const {activeFlights} = this.state;
         return (
             <div className={style.Home}>
-                <img src={require('./logo.svg')} width={48} height={48}/>
-                <p>Hello!</p>
-                <div>
+                <div className={style.select_wrapper}>
                     <select onChange={this.handleCarriersSelectChange}>
-                        {carriers.map((carrier, index) => <CarrierOption key={index} carrier={carrier}/>)}
+                        <option>Выберите компанию</option>
+                        {carriers.map((c, index) => <option key={index} value={c.name}>{c.name}</option>)}
                     </select>
                 </div>
-                <div>
+                <div className={style.content}>
                     {activeFlights.map((flight, index) => <FlightItem key={index} flight={flight}/>)}
                 </div>
             </div>

@@ -1,3 +1,30 @@
 .Home {
-  text-align: center;
+    width: 100%;
+
+    & .select_wrapper {
+        background: #1e2021;
+        width: 100%;
+        padding: 24px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & select {
+            background: #019DEC;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 4px;
+            color: #FFFFFF;
+        }
+    }
+
+    & .content {display: flex;
+          max-width: 1024px;
+          margin: 24px auto;
+          justify-content: flex-start;
+          align-items: stretch;
+          align-content: stretch;
+          flex-flow: row wrap;
+    }
 }

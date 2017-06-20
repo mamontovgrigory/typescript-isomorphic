@@ -1,5 +1,5 @@
 {
-  "name": "onetwotrip-typescript-isomorphic",
+  "name": "typescript-isomorphic",
   "version": "1.0.0",
   "description": "Isomorphic web applications with TypeScript, React, Redux and etc.",
   "main": "build/server.js",

@@ -11,12 +11,4 @@ describe('<Home />', () => {
         expect(component.find(style.Home)).to.exist;
     });
 
-    it('Renders Logo', () => {
-        expect(component.find('img')).to.exist;
-    });
-
-    it('Has a p element that says Hello!', () => {
-        expect(component.find('p').text()).eql('Hello!');
-    });
-
 });

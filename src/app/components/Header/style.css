@@ -1,3 +1,17 @@
 .Header {
+    background: #3A3A3A;
+    color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 
+    & .menu {
+        width: 1024px;
+        height: 72px;
+        padding: 0 24px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
 }
