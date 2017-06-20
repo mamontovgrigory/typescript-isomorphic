@@ -20,11 +20,11 @@
     }
 
     & .content {display: flex;
-          max-width: 1024px;
-          margin: 24px auto;
-          justify-content: flex-start;
-          align-items: stretch;
-          align-content: stretch;
-          flex-flow: row wrap;
+        max-width: 1024px;
+        margin: 24px auto;
+        justify-content: flex-start;
+        align-items: stretch;
+        align-content: stretch;
+        flex-flow: row wrap;
     }
 }
