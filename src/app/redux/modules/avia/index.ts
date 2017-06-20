@@ -1,7 +1,7 @@
 import { IAvia, ICarrier, IFlight, IGetCarriersSuccess, IGetFlightsSuccess } from 'models/avia';
 
-export const GET_FLIGHTS = 'avia/GET_FLIGHTS';
-export const GET_CARRIERS = 'avia/GET_CARRIERS';
+export const GET_FLIGHTS_SUCCESS = 'avia/GET_FLIGHTS_SUCCESS';
+export const GET_CARRIERS_SUCCESS = 'avia/GET_CARRIERS_SUCCESS';
 
 const initialState: IAvia = {
     flights: [],
@@ -10,10 +10,10 @@ const initialState: IAvia = {
 
 export function aviaReducer(state: IAvia = initialState, action: Redux.Action) {
     switch (action.type) {
-        case GET_CARRIERS:
+        case GET_CARRIERS_SUCCESS:
             const {carriers} = action as IGetCarriersSuccess;
             return Object.assign({}, state, {carriers});
-        case GET_FLIGHTS:
+        case GET_FLIGHTS_SUCCESS:
             const {flights} = action as IGetFlightsSuccess;
             return Object.assign({}, state, {flights});
         default:
@@ -23,14 +23,14 @@ export function aviaReducer(state: IAvia = initialState, action: Redux.Action) {
 
 export function getFlightsSuccess(flights: IFlight[]): IGetFlightsSuccess {
     return {
-        type: GET_FLIGHTS,
+        type: GET_FLIGHTS_SUCCESS,
         flights
     };
 }
 
 export function getCarriersSuccess(carriers: ICarrier[]): IGetCarriersSuccess {
     return {
-        type: GET_CARRIERS,
+        type: GET_CARRIERS_SUCCESS,
         carriers
     };
 }

@@ -2,12 +2,14 @@ import * as React from 'react';
 const {connect} = require('react-redux');
 const {asyncConnect} = require('redux-connect');
 
-import { IAvia } from 'models/avia';
-import { getFlights } from 'redux/modules/avia';
+import { IFlight, ICarrier, IGetFlightsSuccess } from 'models/avia';
+import { getFlights } from 'modules/avia/index';
 const style = require('./style.css');
 
 interface IProps {
-    avia: IAvia;
+    flights: IFlight[];
+    carriers: ICarrier[];
+    getFlights: Redux.ActionCreator<IGetFlightsSuccess>;
 }
 
 interface IState {
@@ -21,16 +23,12 @@ interface IState {
 }])
 @connect(
     (state) => ({
-        avia: state.flights
-    }),
-    (dispatch) => ({
-        getFlights: () => dispatch(getFlights())
+        flights: state.avia.flights,
+        carriers: state.avia.carriers
     })
 )
 class Home extends React.Component<IProps, IState> {
     public render() {
-        const {avia} = this.props;
-        console.log(avia);
         return (
             <div className={style.Home}>
                 <img src={require('./logo.svg')} width={48} height={48}/>
