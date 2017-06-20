@@ -46,11 +46,13 @@ export function getFlights() {
 export function getCarriers(flights: IFlight[]) {
     return (dispatch) => {
         const carriers: ICarrier[] = flights.map((flight) => {
-            return {
-                name: flight.carrier
-            };
+            return flight.carrier;
         }).filter((elem, pos, arr) => {
             return arr.indexOf(elem) === pos;
+        }).map((carrierName) => {
+            return {
+                name: carrierName
+            };
         });
         dispatch(getCarriersSuccess(carriers));
     };
