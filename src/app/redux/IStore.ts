@@ -1,5 +1,5 @@
-import { IFlights } from 'models/flights';
+import { IAvia } from 'models/avia';
 
 export interface IStore {
-    flights: IFlights;
+    avia: IAvia;
 }

@@ -25,6 +25,14 @@
     ],
     "jsx-alignment": [
       false
-    ]
+    ],
+    "trailing-comma": [
+      true,
+      {
+        "multiline": "never",
+        "singleline": "never"
+      }
+    ],
+    "no-empty-interface": false
   }
 }
