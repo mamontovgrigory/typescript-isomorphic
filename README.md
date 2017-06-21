@@ -19,7 +19,7 @@ $ npm start # This starts the app in development mode
 
 $ npm build # This builds the app in development mode
 
-$ npm run build:prod # This builds the app in зкщвгсешщт mode
+$ npm run build:prod # This builds the app in production mode
 
 # Testing
 $ npm test
