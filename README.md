@@ -3,8 +3,8 @@
 ## Installation 
 
 ```bash
-$ git clone https://github.com/mamontovgrigory/javascript-spa.git
-$ cd javascript-spa
+$ git clone https://github.com/mamontovgrigory/typescript-isomorphic.git
+$ cd typescript-isomorphic
 $ npm install
 ```
 
