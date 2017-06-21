@@ -26,7 +26,6 @@
     "typings/main.d.ts"
   ],
   "awesomeTypescriptLoaderOptions": {
-    "useCache": true,
     "useBabel": true
   }
 }

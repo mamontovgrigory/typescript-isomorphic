@@ -8,7 +8,7 @@ export const FlightItem = (props: { flight: IFlight }) => (
     <div className={style.FlightItem}>
         <h4 className={style.title}>{props.flight.carrier}</h4>
         <div className={style.text}>
-            <h5>{props.flight.direction.from}<span> - </span>{props.flight.direction.to}</h5>
+            <h4>{props.flight.direction.from}<span> - </span>{props.flight.direction.to}</h4>
             <div>
                 Туда, {moment(props.flight.arrival).format('DD.MM.YYYY')}
             </div>
